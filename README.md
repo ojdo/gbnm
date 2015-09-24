@@ -4,7 +4,7 @@ This repository contains the MATLAB/Octave function `gbnm` that implements the a
 
 Luersen, Marco A., and Rodolphe Le Riche. "[Globalized Nelder–Mead method for engineering optimization](http://www.emse.fr/~leriche/gbnm_cas.pdf)." Computers & structures 82.23 (2004): 2251-2260.
 
-As the title implies, it is a classical [Nelder-Mead method](https://en.wikipedia.org/wiki/Nelder%E2%80%93Mead_method) with some extras for dealing with multiple local optima. The function itself has the following signature:
+As the title implies, it is a classical [Nelder-Mead method](https://en.wikipedia.org/wiki/Nelder%E2%80%93Mead_method) with some extras for dealing with multiple local optima.
 
 ## What does it do?
 
@@ -19,6 +19,8 @@ In each iteration, first the worst point is reflected at the centroid of the rem
 The globalized Nelder-Mead method just generalizes this idea to find a global minimum. Instead of initialising the simplex once, multiple simplices are initialised and each one finds one local minimum. There are some tweaks to make the location of these simplices better than random, but principally they are spread randomly within the allowed boundaries.
 
 ## Usage
+
+The function itself has the following signature:
 
     [x, fval, output, options] = gbnm(fun,xmin,xmax[, options])
     
