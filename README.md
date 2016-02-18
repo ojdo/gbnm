@@ -1,5 +1,7 @@
 # Globalized Nelder-Mead method
 
+![GBNM with 15 to 30 restarts against the (f.l.t.r.) Griewank, Shubert and Tridiagonal test functions](img/gbnm-example-griewank-shubert-trid.png)
+
 This repository contains the MATLAB/Octave function `gbnm` that implements the algorithm described in this paper:
 
 Luersen, Marco A., and Rodolphe Le Riche. "[Globalized Nelder–Mead method for engineering optimization](http://www.emse.fr/~leriche/gbnm_cas.pdf)." Computers & structures 82.23 (2004): 2251-2260.
