@@ -10,7 +10,17 @@ This repository contains the MATLAB/Octave function `gbnm` that implements the a
 
 As the title implies, it is a classical [Nelder-Mead method](https://en.wikipedia.org/wiki/Nelder%E2%80%93Mead_method) with some extras for dealing with multiple local optima in the objective function.
 
-## What does it do?
+## Example
+
+    octave:1> gbnm(@(x) norm(x - [2; 1]), [-5; -5], [5; 5])
+    ans =
+    
+        2.00050
+        0.99941
+
+
+
+## How does it work?
 
 The Nelder-Mead algorithm, sometimes also called downhill simplex method, was originally published in 1965. It is an iterative algorithm for local, unconstrained minimisation of a non-linear objective function `f : R^n --> R`. In contrast to most other iterative algorithms, it does not rely on the derivative of the objective function, but only operates on function values directly. This makes it extremely well suited for cases when the target function is not an algebraic term, but a simulation model. It also does not approximate the function's gradient but is based on geometrical projections of a polygon consisting of n+1 points — the simplex — in the n-dimensional parameter space of the objective function. A simplex in two dimensions is a triangle, one in three dimensions is a tetrahedron. In general, the simplex can be represented as a matrix `S \in R^{n×n+1}` of its points `x_i` as column vectors:
 
